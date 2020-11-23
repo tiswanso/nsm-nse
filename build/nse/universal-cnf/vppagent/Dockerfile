@@ -19,7 +19,7 @@ COPY --from=build /go/bin/cnf-vppagent /bin/cnf-vppagent
 COPY ./build/nse/universal-cnf/vppagent/etc/ /etc/
 COPY ./build/nse/universal-cnf/vppagent/etc/supervisord/supervisord.conf /opt/vpp-agent/dev/supervisor.conf
 RUN set -ex; \
-    rm /opt/vpp-agent/dev/etcd.conf; \
+    rm /opt/aio-agent/dev/etcd.conf; \
     echo 'endpoint: "localhost:9113"' > /opt/vpp-agent/dev/grpc.conf ; \
     echo "disabled: true" > /opt/vpp-agent/dev/telemetry.conf; \
     echo "disabled: true" > /opt/vpp-agent/dev/linux-plugin.conf; \
