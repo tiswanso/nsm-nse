@@ -62,11 +62,13 @@ spec:
               valueFrom:
                 fieldRef:
                   fieldPath: status.podIP
+{{- if .Values.IsInterdomain }}
             - name: NSM_REMOTE_NS_IP_LIST
               valueFrom:
                 configMapKeyRef:
                   name: nsm-vl3-{{ .Values.nsm.serviceName }}
                   key: remote.ip_list
+{{- end }}
             - name: METRICS_PORT
               value: {{ .Values.metricsPort | quote }}
           securityContext:
