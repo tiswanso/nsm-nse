@@ -15,7 +15,7 @@ Options:
 }
 
 NSM_HUB=${NSM_HUB:-tiswanso}
-NSM_TAG=${NSM_TAG:-ipsec-fwdr-peercache-vxlan-v3.2-mech7}
+NSM_TAG=${NSM_TAG:-ipsec-fwdr-peercache-vxlan-v3.2-mech9}
 INSTALL_OP=${INSTALL_OP:-apply}
 INSECURE=${INSECURE:-true}
 
